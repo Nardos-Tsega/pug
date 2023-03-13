@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const registrationSchema = mongoose.Schema({
+const schema = mongoose.Schema({
   name: {
     type: String,
     trim: true,
@@ -11,4 +11,4 @@ const registrationSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Registration", registrationSchema);
+module.exports = mongoose.model("Registration", schema);
