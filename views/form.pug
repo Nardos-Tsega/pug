@@ -1,0 +1,27 @@
+extends ./layout.pug 
+
+block content
+    -data = data || {}
+
+    if errors 
+        for error in errors 
+            li=error.msg 
+
+    form(action='.' method='POST')
+        label(for="name") Name:
+        input(
+            type="text"
+            name="name"
+            id="name"
+            value=data.name
+        )
+
+        label(for="email") Email: 
+        input(
+            type="text"
+            name="email"
+            id="email"
+            value=data.email
+        )
+
+        input(type="submit" value="Submit")
